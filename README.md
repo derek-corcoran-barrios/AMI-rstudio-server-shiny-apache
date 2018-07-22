@@ -40,3 +40,26 @@ If you connect to your instance:8787 it will ask you for your username and passw
 
 `sudo passwd ubuntu`
 
+### Installing shiny server
+
+You’ll also need to install the Shiny R package before installing Shiny Server:
+
+ `sudo su - \ -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""`
+
+Now dowload an install shiny server, the link of the lastest version is in this [link](https://www.rstudio.com/products/shiny/download-server/)
+
+`wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb`
+`sudo gdebi shiny-server-1.5.7.907-amd64.deb`
+
+add port 3838 to the inbound security group just like it was done for the 8080 for the rstudio server
+
+it should look like this:
+
+![TCPRules](TCPRules.png)
+
+### Installing Apache
+
+Apache is open source web-server software that powers much of the web today. It is maintained by apache-http-project. Explore more [here](https://httpd.apache.org/)
+
+`sudo apt-get update`
+`sudo apt-get install apache2`
