@@ -36,3 +36,7 @@ This might not be the latest RStudio Server version, please check the following 
 
 Once you have done this don't forget to add an HTPP security group for port 80 in AWS and an *Custom TCP* for port 8787 (default for Rstudio-server) with **source::anywhere**, now you can use Rstudio-server
 
+If you connect to your instance:8787 it will ask you for your username and password, your username will be ubuntu, and to set up your password you have to run the following code in the terminal
+
+`sudo passwd ubuntu`
+
