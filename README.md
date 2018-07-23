@@ -40,6 +40,30 @@ If you connect to your instance:8787 it will ask you for your username and passw
 
 `sudo passwd ubuntu`
 
+#### Installing devtools
+
+In order to be able to instal curl (and with that devtools) you need to install libcurl4, and libssl
+
+  `sudo apt-get install libcurl4-openssl-dev` 
+   `sudo apt-get install libssl-dev`
+
+#### Installing tidyverse
+
+Some libraries you need to install tidyverse, libxml2
+
+ `sudo apt-get install libxml2-dev`
+ 
+#### Installing sf
+
+Has to install libudunits2
+
+`sudo apt-get install libudunits2-dev`
+
+and
+
+    sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+    sudo apt-get update
+    sudo apt-get install libudunits2-dev libgdal-dev libgeos-dev libproj-dev 
 ### Installing shiny server
 
 You’ll also need to install the Shiny R package before installing Shiny Server:
@@ -51,7 +75,7 @@ Now dowload an install shiny server, the link of the lastest version is in this 
 `wget https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb`
 `sudo gdebi shiny-server-1.5.7.907-amd64.deb`
 
-add port 3838 to the inbound security group just like it was done for the 8080 for the rstudio server
+add port 3838 to the inbound security group just like it was done for the 8787 for the rstudio server
 
 it should look like this:
 
